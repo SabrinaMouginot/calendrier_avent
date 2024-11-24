@@ -1,8 +1,11 @@
 /* Style global */
 main {
+  margin: 0;
+  padding: 0;
     position: relative;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
+    min-height: calc(100vh - 60px);
     background: url(../assets/background.png) no-repeat center center;
     background-size: cover;
     overflow: hidden;
@@ -14,7 +17,7 @@ main {
 html, body, #root {
     margin: 0;
     padding: 0;
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
   }
   

@@ -4,6 +4,7 @@ import Day from "./pages/Day";
 import Noel from "./pages/Noel";
 import Header from "./components/Header";
 import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer";
 import './App.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/Noel" element={<Noel />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
