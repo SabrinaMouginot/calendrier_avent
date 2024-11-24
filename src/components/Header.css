@@ -1,9 +1,9 @@
 .header {
     display: flex;
-    justify-content: space-between; /* Titre à gauche, onglets à droite */
+    justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #d83b3b; /* Couleur de Noël */
+    background-color: #d83b3b;
     color: white;
   }
   
@@ -32,6 +32,6 @@
   }
   
   .nav-links a:hover {
-    color: #ffcccb; /* Une teinte plus claire au survol */
+    color: #ffcccb;
   }
   

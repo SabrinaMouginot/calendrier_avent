@@ -1,4 +1,3 @@
-/* Police et couleurs globales */
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f8ff;
@@ -11,7 +10,6 @@ body {
   height: 100vh;
 }
 
-/* Réinitialisation des marges et paddings par défaut */
 html, body, #root {
   margin: 0;
   padding: 0;
@@ -19,7 +17,6 @@ html, body, #root {
   height: 100%;
 }
 
-/* Box-sizing global pour inclure padding et border dans les dimensions */
 * {
   box-sizing: border-box;
 }
@@ -42,7 +39,6 @@ li {
   text-align: center;
 }
 
-/* Liens globaux */
 a {
   text-decoration: none;
   padding: 10px 20px;
@@ -57,13 +53,11 @@ a:hover {
   background-color: #a52a2a;
 }
 
-/* Images et vidéos */
 img, video {
   max-width: 100%;
   height: auto;
 }
 
-/* Ajout de transitions pour les hover ou focus */
 a, button {
   transition: all 0.3s ease;
 }
