@@ -1,0 +1,98 @@
+/* Style global */
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../assets/background.png) no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+
+* {
+    box-sizing: border-box;
+  }  
+  
+
+/* Conteneurs pour les couches de neige */
+.snow,
+.snowbis {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/snow.png);
+  opacity: 0.5;
+  animation: snowfall 30s linear infinite;
+}
+
+.snow {
+  background-size: 70em;
+}
+
+.snowbis {
+  background-size: 50em;
+  animation: snowfallbis 30s linear infinite;
+}
+
+/* Contenu par-dessus le fond animé */
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 5px #111;
+  margin-bottom: 20px;
+}
+
+.content ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.content li {
+  margin: 10px;
+}
+
+.content a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #d83b3b;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  display: block;
+  text-align: center;
+}
+
+.content a:hover {
+  background-color: #a52a2a;
+}
+
+/* Animation pour la neige */
+@keyframes snowfall {
+  100% {
+    background-position: 70em 50em;
+  }
+}
+
+@keyframes snowfallbis {
+  100% {
+    background-position: 50em 50em;
+  }
+}
