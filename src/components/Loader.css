@@ -1,0 +1,122 @@
+/* 
+  .branch::before,
+  .branch::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 20px;
+  background-color: skyblue;
+  border-radius: 2px;
+  box-shadow: 0 0 10px skyblue;
+}
+
+.branch::before {
+  transform: rotate(45deg);
+  top: -5px;
+  left: -5px;
+}
+
+.branch::after {
+  transform: rotate(-45deg);
+  top: -5px;
+  right: -5px;
+}
+
+
+.branch:nth-child(1) {
+  transform: rotate(0deg);
+}
+.branch:nth-child(2) {
+  transform: rotate(60deg);
+}
+.branch:nth-child(3) {
+  transform: rotate(120deg);
+}
+.branch:nth-child(4) {
+  transform: rotate(180deg);
+}
+.branch:nth-child(5) {
+  transform: rotate(240deg);
+}
+.branch:nth-child(6) {
+  transform: rotate(300deg);
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}  */
+
+.snowflake-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hauteur de l'écran */
+    background-color: #f0f8ff; /* Fond optionnel */
+    overflow: hidden;
+  }
+  
+  /* .snowflake {
+    font-size: 50px;
+    color: skyblue; 
+    animation: move-s 4s ease-in-out infinite; 
+  } */
+
+  .snowflake {
+    font-size: 100px; /* Taille augmentée du flocon */
+    color: skyblue; /* Couleur */
+    animation: move-s 4s ease-in-out infinite, spin 2s linear infinite;
+  }
+  
+  /* Animation du mouvement en S */
+  @keyframes move-s {
+    0% {
+      transform: translateX(0) translateY(0); /* Départ au centre */
+    }
+    25% {
+      transform: translateX(-50px) translateY(30px); /* Vers la gauche */
+    }
+    50% {
+      transform: translateX(50px) translateY(60px); /* Vers la droite */
+    }
+    75% {
+      transform: translateX(-50px) translateY(90px); /* Vers la gauche */
+    }
+    100% {
+      transform: translateX(0) translateY(120px); /* Retour au centre, plus bas */
+    }
+  }
+  
+
+/* 
+.snowflake-loader {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f0f8ff; 
+  }
+  
+  .snowflake {
+    position: absolute;
+    top: -50px;
+    left: calc(100% * var(--random-x));
+    font-size: 30px;
+    color: skyblue;
+    animation: fall 5s linear infinite;
+  }
+  
+ 
+  @keyframes fall {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }
+   */
