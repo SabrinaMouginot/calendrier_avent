@@ -1,0 +1,34 @@
+ /* Style global */
+ * {
+     box-sizing: border-box;
+ }
+
+ main {
+     margin: 0;
+     padding: 0;
+     position: relative;
+     width: 100%;
+     /* height: 100vh; */
+     min-height: calc(100vh - 60px);
+     background: url(../assets/background.png) no-repeat center center;
+     background-size: cover;
+     overflow: hidden;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ html,
+ body,
+ #root {
+     margin: 0;
+     padding: 0;
+     /* width: 100%; */
+     height: 100%;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ 
