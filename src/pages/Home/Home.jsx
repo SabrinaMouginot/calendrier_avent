@@ -1,4 +1,4 @@
-import "./Home.css";
+import "../Home/Home.css";
 
 const Home = () => {
   const days = Array.from({ length: 24 }, (_, i) => i + 1); // 1 à 24

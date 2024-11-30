@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import "./Home.css";
-import Loader from "../components/Loader";
+import "../pages/Home/Home.css";
+import Loader from "./Loader/Loader";
 
 const API_KEY = "2a80c2b2275b613fff8c798b3ffcfdfa";
 

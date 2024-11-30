@@ -1,4 +1,4 @@
-import "./Home.css";
+import "../pages/Home/Home.css";
 
 const Noel = () => {
     return (

@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Day from "./pages/Day";
-import Noel from "./pages/Noel";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import NotFound from "./pages/NotFound";
-import About from "./pages/About";
+import Home from "./pages/Home/Home";
+import NotFound from "./pages/NotFound/NotFound";
+import About from "./pages/About/About";
+import Day from "./components/Day";
+import Noel from "./components/Noel";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import './App.css'
 
 function App() {
