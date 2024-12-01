@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="copyright">
-      <p className="copyright">© 2024 Calendrier de l’Avent - Tous droits réservés.</p>
+      <p className="copyright">© 2024 - Calendrier de l’Avent - Tous droits réservés.</p>
       <p className="conception">
         Conçu avec <span className="heart-circle">❤️</span> pour les fêtes  
       </p>
