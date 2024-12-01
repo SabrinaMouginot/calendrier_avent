@@ -1,4 +1,4 @@
-.header {
+/* .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,23 +34,23 @@
   .nav-links a:hover {
     color: #ffcccb;
   } 
-
+*/
 
   /* Nécessaire pour le menu déroulant */
 
-  .nav-links li {
+   /* .nav-links li {
     position: relative; 
     margin-left: 15px;
   } 
   
   .nav-link.active {
-    color: #FFD700; /* Couleur dorée */
+    color: #FFD700; 
     font-weight: bold;
-    border-bottom: 2px solid #FFD700; /* Soulignement doré */
-  }
+    border-bottom: 2px solid #FFD700;
+  }*/
   
   /* Menu déroulant */
-   .dropdown-menu {
+   /*   .dropdown-menu {
     display: none;
     position: absolute;
     top: 100%;
@@ -75,10 +75,96 @@
   
   .dropdown-menu a:hover {
     background-color: #a52a2a;
-  }
+  }    */
    
   /* Montrer le menu déroulant au survol */
-  .dropdown:hover .dropdown-menu {
+   /*.dropdown:hover .dropdown-menu {
     display: block;
   }
-   
+    */
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #d83b3b;
+  color: white;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: none; /* Par défaut, l'icône est masquée */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex; /* Liens visibles en format desktop */
+  gap: 20px;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffcccb; /* Changement de couleur au survol */
+}
+
+/* Responsive Design: Mobile Menu */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex; /* Affiche le menu hamburger */
+  }
+
+  .nav-links {
+    display: none; /* Cache les liens de navigation par défaut */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #d83b3b; /* Même couleur que l'en-tête */
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 1000; /* S'assure que le menu reste au-dessus des autres éléments */
+  }
+
+  .nav-links.open {
+    display: flex; /* Affiche les liens de navigation lorsque le menu est ouvert */
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    text-align: left;
+    padding: 10px; /* Ajoute un peu de padding pour le confort de clic */
+  }
+}

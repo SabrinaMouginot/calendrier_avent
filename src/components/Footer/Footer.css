@@ -55,3 +55,40 @@ align-items: center;
   color: red;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Footer en colonne sur petits écrans */
+@media (max-width: 850px) {
+  .copyright {
+    justify-content:space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .ccopyright {
+    display: flex;
+    align-items: start;
+    justify-content:center;
+    flex-direction: column;
+    
+  }
+
+   .ccopyright .droits {
+    display: flex;
+    align-items: start;
+  }
+
+}
+
+@media (max-width: 750px) {
+  .copyright {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer p,
+  .footer a {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+  }
+}
