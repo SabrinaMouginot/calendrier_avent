@@ -3,7 +3,7 @@ import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import About from "./pages/About/About";
 import Noel from "./pages/Noel/Noel";
-import Day from "./components/Day";
+import Day from "./pages/Day/Day";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import './App.css'
