@@ -3,6 +3,7 @@ import "../About/About.css";
 const About = () => {
   return (
     <main className="main" >
+      {/* <audio src="C:/Users/Utilisateur/Desktop/calendrier-avent/src/assets/jingle-bells-bells.mp3" autoPlay loop /> */}
       <div className="snow"></div>
       <div className="snowbis"></div>
 

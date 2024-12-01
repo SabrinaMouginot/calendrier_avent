@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import About from "./pages/About/About";
+import Noel from "./pages/Noel/Noel";
 import Day from "./components/Day";
-import Noel from "./components/Noel";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import './App.css'
