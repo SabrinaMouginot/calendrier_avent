@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../Home/Home";
 import Loader from "../../components/Loader/Loader";
+import "../Day/Day.css"
 
 const API_KEY = "2a80c2b2275b613fff8c798b3ffcfdfa";
 
@@ -12,18 +13,19 @@ const movies = [
   98, 313369, 299534, 634649, 284054, 10740, 862, 354912, 194, 18,
 ];
 
-// Remplacement spécifique pour le 2e volet (dont j'ai observé que la vidéo était indisponible)
-const replacementMovieId = 299534; // ID TMDb d'un autre film (par exemple, Avengers: Endgame)
+// Remplacement spécifique pour le 2e volet
+const replacementMovieId = 299534; // ID TMDb d'un autre film
 
 const Day = () => {
-  const { id } = useParams(); // Récupère l'ID du jour (1 à 24)
+  const { id } = useParams(); // Récupère l'ID du jour
+  const navigate = useNavigate(); // Pour changer de jour via la navigation
+  const [currentIndex, setCurrentIndex] = useState(Number(id) - 1); // Index actuel dans la liste
   const [movie, setMovie] = useState(null); // État pour stocker les données du film
 
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        // Si c'est le 2e volet, on utilise un film de remplacement
-        const movieId = id === "2" ? replacementMovieId : movies[id - 1];
+        const movieId = currentIndex === 1 ? replacementMovieId : movies[currentIndex];
 
         // Récupérer les détails du film
         const movieResponse = await axios.get(
@@ -52,7 +54,19 @@ const Day = () => {
     };
 
     fetchMovie();
-  }, [id]);
+  }, [currentIndex]);
+
+  const handleNext = () => {
+    const nextIndex = (currentIndex + 1) % movies.length;
+    setCurrentIndex(nextIndex);
+    navigate(`/day/${nextIndex + 1}`);
+  };
+
+  const handlePrevious = () => {
+    const prevIndex = (currentIndex - 1 + movies.length) % movies.length;
+    setCurrentIndex(prevIndex);
+    navigate(`/day/${prevIndex + 1}`);
+  };
 
   if (!movie) {
     return <Loader />;
@@ -67,20 +81,27 @@ const Day = () => {
       {/* Contenu spécifique à Day */}
       <div className="content">
         <h1>{movie.title}</h1>
-        {movie.trailer ? (
-          <iframe
-            width="560"
-            height="315"
-            src={movie.trailer}
-            title="Bande-Annonce"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            style={{ margin: "20px 0" }}
-          ></iframe>
-        ) : (
-          <p>Aucune bande-annonce disponible</p>
-        )}
+        <div className="carousel-container">
+          <button onClick={handlePrevious} className="carousel-arrow prev">
+            ◀
+          </button>
+          {movie.trailer ? (
+            <iframe
+              width="560"
+              height="315"
+              src={movie.trailer}
+              title="Bande-Annonce"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          ) : (
+            <p>Aucune bande-annonce disponible</p>
+          )}
+          <button onClick={handleNext} className="carousel-arrow next">
+            ▶
+          </button>
+        </div>
       </div>
     </main>
   );
