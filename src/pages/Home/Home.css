@@ -66,10 +66,6 @@ html, body, #root {
   padding: 0;
 }
 
-.content li {
-  margin: 10px;
-}
-
 .content a {
   text-decoration: none;
   padding: 10px 20px;

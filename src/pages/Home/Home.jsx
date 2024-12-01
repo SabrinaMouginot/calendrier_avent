@@ -13,7 +13,6 @@ const Home = () => {
         <ul>
           {days.map((day) => (
             <li key={day}>
-              {/* <a href={`/day/${day}`}>Jour {day}</a> */}
               <Card key={day} day={day} link={`/day/${day}`} />
             </li>
           ))}
