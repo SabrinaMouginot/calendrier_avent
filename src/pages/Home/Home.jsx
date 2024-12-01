@@ -8,7 +8,7 @@ const Home = () => {
       <div className="snow"></div>
       <div className="snowbis"></div>
       <div className="content">
-        <h1>Calendrier de l&rsquo;Avent</h1>
+        <h1>Calendrier de l&rsquo;Avent 2024</h1>
         <ul>
           {days.map((day) => (
             <li key={day}>
