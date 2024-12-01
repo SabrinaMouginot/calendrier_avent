@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../Home/Home";
 import Loader from "../../components/Loader/Loader";
-import "../Day/Day.css"
+import "./Day.css"
 
 const API_KEY = "2a80c2b2275b613fff8c798b3ffcfdfa";
 
@@ -101,6 +101,10 @@ const Day = () => {
           <button onClick={handleNext} className="carousel-arrow next">
             ▶
           </button>
+        </div>
+        {/* Compteur sous la vidéo */}
+        <div className="counter">
+          <p>{currentIndex + 1}/24</p>
         </div>
       </div>
     </main>

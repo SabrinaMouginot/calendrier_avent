@@ -3,41 +3,72 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  iframe {
-    border: 2px solid #b22222; /* Optionnel : bordure festive autour de la vidéo */
-    border-radius: 10px; /* Coins arrondis */
-  }
-  
-  .carousel-arrow {
+}
+
+iframe {
+    border: 2px solid #b22222;
+    /* Optionnel : bordure festive autour de la vidéo */
+    border-radius: 10px;
+    /* Coins arrondis */
+}
+
+.carousel-arrow {
     position: absolute;
-    top: 50%; /* Centre verticalement par rapport à la vidéo */
-    transform: translateY(-50%); /* Ajuste le centrage vertical */
-    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    top: 50%;
+    /* Centre verticalement par rapport à la vidéo */
+    transform: translateY(-50%);
+    /* Ajuste le centrage vertical */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fond semi-transparent */
     color: white;
     border: none;
-    font-size: 3rem; /* Taille des flèches */
+    font-size: 3rem;
+    /* Taille des flèches */
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
     transition: background-color 0.3s ease;
-    z-index: 10; /* S'assure que les flèches restent au-dessus de la vidéo */
-  }
-  
-  .carousel-arrow:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Fond plus clair au survol */
-    color: black;
-  }
-  
-  .carousel-arrow.prev {
-left: -80px;     
-/* Décale la flèche à gauche, avec un espace par rapport à la vidéo */
+    z-index: 10;
+    /* S'assure que les flèches restent au-dessus de la vidéo */
+}
 
-  }
-  
-  .carousel-arrow.next {
-    right: -80px; 
+.carousel-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fond plus clair au survol */
+    color: black;
+}
+
+.carousel-arrow.prev {
+    left: -80px;
+    /* Décale la flèche à gauche, avec un espace par rapport à la vidéo */
+
+}
+
+.carousel-arrow.next {
+    right: -80px;
     /* Décale la flèche à droite, avec un espace par rapport à la vidéo */
-  }
-  
+}
+
+.video-container {
+    position: relative;
+    text-align: center;
+}
+
+.counter {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #b22222;
+    font-weight: bold;
+    text-align: center;
+
+
+    background-color: #ffffff;
+    /* Fond blanc pour le contraste */
+    padding: 5px 15px;
+    /* Ajout d'espace autour du texte */
+    border-radius: 10px;
+    /* Coins arrondis pour un effet moderne */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Ombre pour le relief */
+    display: inline-block;
+}
