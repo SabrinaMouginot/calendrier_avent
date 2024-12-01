@@ -52,12 +52,8 @@ iframe {
 
 
     background-color: #ffffff;
-    /* Fond blanc pour le contraste */
     padding: 5px 15px;
-    /* Ajout d'espace autour du texte */
     border-radius: 10px;
-    /* Coins arrondis pour un effet moderne */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    /* Ombre pour le relief */
     display: inline-block;
 }
