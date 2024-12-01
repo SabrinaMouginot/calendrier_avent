@@ -1,4 +1,4 @@
-.carousel-container {
+/* .carousel-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -56,4 +56,61 @@ iframe {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     display: inline-block;
-}
+} */
+
+/* Place le message en bas de la page */
+.navigation-info {
+    position: absolute;
+    /* bottom: 20px; */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: #d83b3b;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* Animation d'apparition */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Assurez-vous que le conteneur parent remplit toute la hauteur */
+  main {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 60px;
+  }
+  
+
+/* 
+.navigation-info {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #d83b3b;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+   */
