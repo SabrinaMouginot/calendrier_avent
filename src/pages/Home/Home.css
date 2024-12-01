@@ -82,8 +82,8 @@ html, body, #root {
 /* Organisation des cards en 3 colonnes */
 @media (max-width: 768px) {
   .content ul {
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-    gap: 10px; /* Espacement entre les cards */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 }
 

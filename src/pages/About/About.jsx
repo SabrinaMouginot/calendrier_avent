@@ -3,7 +3,6 @@ import "../About/About.css";
 const About = () => {
   return (
     <main className="main" >
-      {/* <audio src="C:/Users/Utilisateur/Desktop/calendrier-avent/src/assets/jingle-bells-bells.mp3" autoPlay loop /> */}
       <div className="snow"></div>
       <div className="snowbis"></div>
 
@@ -49,11 +48,6 @@ const About = () => {
               <p> Ces ateliers m&rsquo;ont donnés le goût d&rsquo;approfondir mes compétences . Depuis, je n&rsquo;ai cessé d&rsquo;apprendre dans ce domaine. J&rsquo;ai obtenu un Bac+2 puis un Bac+3/4 , effectué un stage de deux mois en Belgique, et je me suis lancée dans de nombreux projets personnels. </p>
             </div>
           </div>
-
-          {/* <div className="contact">
-            <h2>Contact</h2>
-            <p>Pour toute question ou suggestion, contactez-moi : <a href="mailto:s.mouginot@yahoo.fr">s.mouginot@yahoo.fr</a>.</p>
-          </div> */}
         </section>
       </div>
     </main >
