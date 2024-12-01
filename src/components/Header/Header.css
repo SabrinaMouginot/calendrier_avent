@@ -43,17 +43,11 @@
     margin-left: 15px;
   } 
   
-  /* .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1em;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
+  .nav-link.active {
+    color: #FFD700; /* Couleur dorée */
+    font-weight: bold;
+    border-bottom: 2px solid #FFD700; /* Soulignement doré */
   }
-  
-  .nav-links a:hover {
-    background-color: #a52a2a;
-  } */
   
   /* Menu déroulant */
    .dropdown-menu {
