@@ -41,3 +41,21 @@
     color: white;
     line-height: 1.6;
 }
+
+/* Responsive design pour les écrans inférieurs à 769px */
+@media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    #project, #about-me {
+      text-align: center;
+      align-items: center;
+    }
+  
+    .about-container p {
+      text-align: justify;
+    }
+  }
+  
