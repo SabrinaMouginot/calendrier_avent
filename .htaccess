@@ -1,0 +1,12 @@
+# Configuration de base pour React/Vite
+
+Options -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [QSA,L]
+
+# Types MIME pour les fichiers JavaScript et CSS
+
+AddType application/javascript .js
+AddType text/css .css
