@@ -13,13 +13,13 @@ const Footer = () => {
       <div className="social-links">
       {/* <a href="/about">À propos</a> */}
         <a href="https://www.linkedin.com/in/sabrinamouginot/" target="_blank" rel="noreferrer">
-          <img src="../../src/assets/linkedin.png" alt="LinkedIn" />
+          <img src="../../../public/linkedin.png" alt="LinkedIn" />
         </a>
         <a href="https://github.com/SabrinaMouginot?tab=repositories" target="_blank" rel="noreferrer">
-          <img src="../../src/assets/github.png" alt="Github" />
+          <img src="../../../public/github.png" alt="Github" />
         </a>
         <a href="mailto:s.mouginot@yahoo.fr" className="contact-link">
-          <img src="../src/assets/yahoo.png" alt="Mail" />
+          <img src="../../../public/yahoo.png" alt="Mail" />
         </a>
       </div>
       </div>
