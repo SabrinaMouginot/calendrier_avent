@@ -1,0 +1,85 @@
+.noel-page {
+    text-align: center;
+    padding: 20px;
+    font-family: "Arial", sans-serif;
+    position: relative;
+    overflow: hidden;
+    /* Empêche le débordement des flocons */
+}
+
+.noel-form {
+    margin: 200px auto;
+    max-width: 400px;
+    text-align: left;
+    background-color: #fdf5e6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    /* Place le formulaire au-dessus des flocons */
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Place les flocons derrière le formulaire */
+.snow,
+.snowbis {
+    z-index: 0;
+    /* Les flocons sont au fond */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.send-button,
+.reset-button {
+    display: inline-block;
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.send-button:hover,
+.reset-button:hover {
+    background-color: #d83a00;
+}
+
+.success-message {
+    background-color: #e6ffe6;
+    border: 1px solid #00c800;
+    padding: 20px;
+    border-radius: 10px;
+
+    position: relative;
+    z-index: 10;
+    /* Le message de succès est également au-dessus */
+}
+
+.success-message h2 {
+    color: #00a000;
+}
