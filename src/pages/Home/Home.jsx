@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <main>
-      <audio src="/jingle-bells-bells.mp3" autoPlay loop />
+      <audio src="/christmas-spirit.mp3" autoPlay loop id="background-audio" />
       <div className="snow"></div>
       <div className="snowbis"></div>
       <div className="content">
