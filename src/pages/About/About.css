@@ -7,6 +7,7 @@
 
 .main .title {
     margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .snow,
@@ -17,7 +18,6 @@
 
 .about-page {
     overflow: hidden;
-    /* Empêche le débordement des flocons */
     z-index: 10;
 }
 
@@ -47,18 +47,31 @@
     gap: 20px;
 }
 
+.project,
+.features,
+.technologies,
+.about-me {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
 .about-container h2 {
     margin-bottom: 10px;
+    color: #fffae6;
 }
 
 .about-container p {
     line-height: 1.6;
+    color: #fff;
 }
 
 .about-container h2,
 .about-container p {
-    color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
 }
 
 
