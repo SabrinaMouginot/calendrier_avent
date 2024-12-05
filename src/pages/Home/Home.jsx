@@ -53,8 +53,8 @@ const Home = () => {
         <div className="snow"></div>
         <div className="snowbis"></div>
         <div className="content">
-          <h1>Calendrier de l&rsquo;Avent 2024</h1>
-          <ul>
+          <h1 className="title">Calendrier de l&rsquo;Avent 2024</h1>
+          <ul className="days">
             {days.map((day) => (
               <Card
                 key={day}

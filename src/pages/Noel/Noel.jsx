@@ -51,7 +51,7 @@ const Noel = () => {
             <div className="snow"></div>
             <div className="snowbis"></div>
             <div className="noel-page">
-                <h1>Écris ta lettre au Père Noël</h1>
+                <h1 className="title">Écris ta lettre au Père Noël</h1>
                 {!submitted ? (
                     <form onSubmit={handleSubmit} className="noel-form">
                         <div className="form-group">
