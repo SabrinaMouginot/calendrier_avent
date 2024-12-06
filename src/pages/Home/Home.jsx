@@ -74,7 +74,7 @@ const Home = () => {
           muted={isMuted}
           id="background-audio"
         />
-        <div className="audio-controls">
+        {/* <div className="audio-controls">
           <img
             src={speakerIcon}
             alt="Haut-parleur"
@@ -90,8 +90,30 @@ const Home = () => {
             onChange={handleVolumeChange}
             className="volume-slider"
             aria-label="Volume Control"
-          />
-        </div>
+          /> 
+        </div> */}
+
+<div className="audio-controls">
+  <img
+    src={speakerIcon}
+    alt="Haut-parleur"
+    onClick={toggleMute}
+    className={`speaker-icon ${isMuted ? "muted" : ""}`}
+  />
+  <div className="volume-display">{Math.round(volume * 100)}%</div>
+  <input
+    type="range"
+    min="0"
+    max="1"
+    step="0.01"
+    value={volume}
+    onChange={handleVolumeChange}
+    className="volume-slider"
+    aria-label="Volume Control"
+  />
+</div>
+
+        
         <div className="snow"></div>
         <div className="snowbis"></div>
         <div className="content">

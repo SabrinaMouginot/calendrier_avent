@@ -63,6 +63,27 @@ body,
   background: linear-gradient(to right, #add8e6 50%, #ffffff 50%); /* Bleu clair à gauche, blanc à droite */
 }
 
+
+.audio-controls {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  flex-direction: column; /* Permet d'empiler les éléments */
+  align-items: center;
+  gap: 5px; /* Espacement entre l'icône, le pourcentage et le slider */
+  z-index: 100;
+}
+
+.volume-display {
+  font-size: 0.9rem; /* Taille de police fine */
+  color: #ffffff; /* Blanc */
+  font-weight: 300; /* Style fin */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Ombre pour améliorer la visibilité */
+}
+
+
+
 /* Conteneurs pour les couches de neige */
 .snow,
 .snowbis {
