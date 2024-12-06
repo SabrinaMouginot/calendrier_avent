@@ -38,14 +38,14 @@ iframe {
 .carousel-arrow.prev {
   left: 50px; 
   @media (max-width:768px) {
-    left: -80px
+    left: 0;
   }
 }
 
 .carousel-arrow.next {
   right: 50px; 
   @media (max-width:768px) {
-    right: -80px;
+    right: 0;
   }
 }
 
