@@ -11,6 +11,16 @@ const Noel = () => {
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false); // État pour le chargement
+  const [loadingMessage, setLoadingMessage] = useState(""); // Message spécifique au Loader
+
+  const messages = [
+    "Les lutins emballent votre lettre... C’est presque prêt !",
+    "Rudolph chauffe son nez pour l’expédition... Patience !",
+    "Recherche du timbre magique... Veuillez patienter !",
+    "Les cloches tintent doucement... Votre lettre s’envole bientôt !",
+    "Votre lettre prend le chemin du Pôle Nord... Ne bougez pas !",
+    "Le Père Noël finit ses cookies... Votre lettre arrive après sa dernière bouchée !",
+  ];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,7 +31,10 @@ const Noel = () => {
     e.preventDefault();
 
     if (formData.name && formData.email && formData.letter) {
+      // Choisir un message aléatoire avant de commencer le chargement
+      setLoadingMessage(messages[Math.floor(Math.random() * messages.length)]);
       setLoading(true); // Activer le Loader
+
       try {
         const response = await fetch(
           "https://santa-s-mailbox-backend.onrender.com/send-letter",
@@ -58,7 +71,7 @@ const Noel = () => {
       <div className="noel-page">
         <h1 className="title">Écris ta lettre au Père Noël</h1>
         {loading ? (
-          <Loader /> // Afficher le Loader pendant le chargement
+          <Loader message={loadingMessage} /> // Passer le message spécifique au Loader
         ) : !submitted ? (
           <form onSubmit={handleSubmit} className="noel-form">
             <div className="form-group">
@@ -105,7 +118,7 @@ const Noel = () => {
           </form>
         ) : (
           <div className="success-message">
-            <h2>Merci pour ta lettre, {formData.name} ! 🎅</h2>
+            <h2>Merci pour ta lettre, {formData.name} ! </h2>
             <p>Le Père Noël a reçu ta lettre et te répondra bientôt à {formData.email}.</p>
             <button
               onClick={() => setSubmitted(false)}
