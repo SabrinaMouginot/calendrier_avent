@@ -57,29 +57,10 @@ body,
 }
 
 .volume-slider {
-  width: 100px;
   cursor: pointer;
-  appearance: none;
-  background-color: #d83b3b;
-  height: 5px;
   border-radius: 5px;
-}
-
-.volume-slider::-webkit-slider-thumb {
-  appearance: none;
-  width: 10px;
-  height: 10px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.volume-slider::-moz-range-thumb {
-  width: 10px;
-  height: 10px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  cursor: pointer;
+  height: 5px;
+  background: linear-gradient(to right, #add8e6 50%, #ffffff 50%); /* Bleu clair à gauche, blanc à droite */
 }
 
 /* Conteneurs pour les couches de neige */
