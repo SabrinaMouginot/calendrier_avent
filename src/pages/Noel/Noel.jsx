@@ -1,3 +1,6 @@
+
+
+
 import { useState } from "react";
 import "../Noel/Noel.css";
 import Loader from "../../components/Loader/Loader";
@@ -64,6 +67,16 @@ const Noel = () => {
     }
   };
 
+  // Fonction pour réinitialiser le formulaire
+  const resetForm = () => {
+    setFormData({
+      name: "",
+      email: "",
+      letter: "",
+    });
+    setSubmitted(false); // Réinitialise également l'état de la modale
+  };
+
   return (
     <main>
       <div className="snow"></div>
@@ -121,7 +134,7 @@ const Noel = () => {
             <h2>Merci pour ta lettre, {formData.name} ! </h2>
             <p>Le Père Noël a reçu ta lettre et te répondra bientôt à {formData.email}.</p>
             <button
-              onClick={() => setSubmitted(false)}
+              onClick={resetForm} // Réinitialiser le formulaire et la modale
               className="reset-button"
             >
               Écrire une autre lettre
