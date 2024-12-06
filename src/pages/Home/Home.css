@@ -32,7 +32,7 @@ body,
   left: 15px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px; /* Espacement entre l'icône, le pourcentage et le slider */
   z-index: 100;
 }
 
@@ -61,18 +61,6 @@ body,
   border-radius: 5px;
   height: 5px;
   background: linear-gradient(to right, #add8e6 50%, #ffffff 50%); /* Bleu clair à gauche, blanc à droite */
-}
-
-
-.audio-controls {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px; /* Espacement entre l'icône, le pourcentage et le slider */
-  z-index: 100;
 }
 
 .volume-display {
@@ -116,6 +104,12 @@ body,
   text-shadow: 2px 2px 5px #111;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  @media (max-width: 768px) {
+    margin-top: 50px;
+    font-size: 2em;
+  }
+
 }
 
 .content .days {
