@@ -1,58 +1,68 @@
 .player-container {
-    text-align: center;
+  text-align: center;
+  position: relative; /* Nécessaire pour le conteneur principal */
+}
+
+.player-container h1{
+  @media (max-width:768px) {
+    font-size: 1.2rem;
   }
-  
-  .carousel-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+iframe {
+  border: 2px solid #b22222;
+  border-radius: 10px;
+}
+
+/* Styles pour les flèches */
+.carousel-arrow {
+  position: fixed; /* Position fixe par rapport à la fenêtre */
+  top: 50%; /* Centre verticalement par rapport à la page */
+  transform: translateY(-50%);
+  background-color: transparent; /* Pas de fond */
+  color: white;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 10; /* Assure que les flèches restent au-dessus des autres éléments */
+}
+
+.carousel-arrow.prev {
+  left: 50px; 
+  @media (max-width:768px) {
+    left: -80px
   }
-  
-  iframe {
-    border: 2px solid #b22222;
-    border-radius: 10px;
-  }
-  
-  .carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-    border: none;
-    font-size: 3rem;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s ease;
-    z-index: 10;
-  }
-  
-  .carousel-arrow:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
-  }
-  
-  .carousel-arrow.prev {
-    left: -80px;
-  }
-  
-  .carousel-arrow.next {
+}
+
+.carousel-arrow.next {
+  right: 50px; 
+  @media (max-width:768px) {
     right: -80px;
   }
-  
-  .counter {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #b22222;
-    font-weight: bold;
-    text-align: center;
-    background-color: #ffffff;
-    padding: 5px 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    display: inline-block;
-  }
-  
+}
+
+/* Gérer le survol */
+.carousel-arrow:hover {
+  color: black; /* Change la couleur au survol */
+}
+
+.counter {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #b22222;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 5px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
