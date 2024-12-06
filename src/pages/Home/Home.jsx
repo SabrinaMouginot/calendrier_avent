@@ -2,12 +2,12 @@ import { useState, useEffect, useRef } from "react";
 import "../Home/Home.css";
 import Card from "../../components/Card/Card";
 import Modal from "../../components/Modal/Modal";
-import speakerIcon from "../../assets/speaker-icon.png"; // Remplacez par une icône claire si nécessaire
+import speakerIcon from "../../assets/speaker-icon.png";
 
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
-  const [volume, setVolume] = useState(0.5); // Volume initial
+  const [volume, setVolume] = useState(0.05); // Volume initial à 5%
   const audioRef = useRef(null);
   const days = Array.from({ length: 24 }, (_, i) => i + 1);
   const today = new Date();
@@ -25,11 +25,13 @@ const Home = () => {
       setShowModal(true);
     } else {
       if (audioRef.current) {
+        audioRef.current.volume = volume; // Applique le volume initial
         audioRef.current.play().catch((err) => {
           console.warn("Lecture audio bloquée :", err);
         });
       }
     }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -74,13 +76,14 @@ const Home = () => {
           muted={isMuted}
           id="background-audio"
         />
-        {/* <div className="audio-controls">
+        <div className="audio-controls">
           <img
             src={speakerIcon}
             alt="Haut-parleur"
             onClick={toggleMute}
             className={`speaker-icon ${isMuted ? "muted" : ""}`}
           />
+          <div className="volume-display">{Math.round(volume * 100)}%</div>
           <input
             type="range"
             min="0"
@@ -90,30 +93,9 @@ const Home = () => {
             onChange={handleVolumeChange}
             className="volume-slider"
             aria-label="Volume Control"
-          /> 
-        </div> */}
+          />
+        </div>
 
-<div className="audio-controls">
-  <img
-    src={speakerIcon}
-    alt="Haut-parleur"
-    onClick={toggleMute}
-    className={`speaker-icon ${isMuted ? "muted" : ""}`}
-  />
-  <div className="volume-display">{Math.round(volume * 100)}%</div>
-  <input
-    type="range"
-    min="0"
-    max="1"
-    step="0.01"
-    value={volume}
-    onChange={handleVolumeChange}
-    className="volume-slider"
-    aria-label="Volume Control"
-  />
-</div>
-
-        
         <div className="snow"></div>
         <div className="snowbis"></div>
         <div className="content">

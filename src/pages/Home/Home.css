@@ -69,16 +69,16 @@ body,
   top: 15px;
   left: 15px;
   display: flex;
-  flex-direction: column; /* Permet d'empiler les éléments */
+  flex-direction: column;
   align-items: center;
   gap: 5px; /* Espacement entre l'icône, le pourcentage et le slider */
   z-index: 100;
 }
 
 .volume-display {
-  font-size: 0.9rem; /* Taille de police fine */
-  color: #ffffff; /* Blanc */
-  font-weight: 300; /* Style fin */
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: 300;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Ombre pour améliorer la visibilité */
 }
 
