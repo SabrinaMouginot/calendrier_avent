@@ -21,11 +21,66 @@ body,
   height: 100%;
 }
 
-
 * {
   box-sizing: border-box;
 }
 
+/* Contrôles audio */
+.audio-controls {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 100;
+}
+
+.speaker-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8); /* Cercle clair */
+  border-radius: 50%; /* Cercle */
+  padding: 5px; /* Espace autour de l'icône */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Effet 3D */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.speaker-icon:hover {
+  transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.speaker-icon.muted {
+  opacity: 0.5; /* Icône moins visible si le son est coupé */
+}
+
+.volume-slider {
+  width: 100px;
+  cursor: pointer;
+  appearance: none;
+  background-color: #d83b3b;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
 
 /* Conteneurs pour les couches de neige */
 .snow,
@@ -59,11 +114,6 @@ body,
   text-shadow: 2px 2px 5px #111;
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-
-  @media (max-width: 769px) {
-    margin: 20px;
-  }
-
 }
 
 .content .days {
@@ -72,17 +122,9 @@ body,
   gap: 10px;
   list-style: none;
   padding: 0;
-
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
   border-radius: 5px;
-}
-
-/* Réduire la taille du titre */
-@media (max-width: 768px) {
-  .content h1 {
-    font-size: 2rem;
-  }
 }
 
 /* Organisation des cards en 3 colonnes */
@@ -97,24 +139,7 @@ body,
   .content .days {
     grid-template-columns: repeat(1, 1fr);
     margin: 0px 50px;
-
   }
-}
-
-
-.content a {
-  text-decoration: none;
-  padding: 10px 20px;
-  background-color: #d83b3b;
-  color: #fff;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  display: block;
-  text-align: center;
-}
-
-.content a:hover {
-  background-color: #a52a2a;
 }
 
 /* Animation pour la neige */
