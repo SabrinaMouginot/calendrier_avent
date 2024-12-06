@@ -87,14 +87,14 @@ body,
 
 /* Organisation des cards en 3 colonnes */
 @media (max-width: 768px) {
-  .content ul {
+  .content .days {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
 }
 
 @media (max-width: 500px) {
-  .content ul {
+  .content .days {
     grid-template-columns: repeat(1, 1fr);
     margin: 0px 50px;
 
