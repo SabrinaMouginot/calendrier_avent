@@ -1,10 +1,17 @@
 .snowflake-loader {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
+    flex-direction: column;
     height: 100vh;
     background-color: #f0f8ff;
     overflow: hidden;
+   background-color: rgba(255, 255, 255, 0.01);
+  }
+
+  .snowflake-loader .patienter {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
   }
 
 
@@ -33,31 +40,3 @@
     }
   }
   
-
-/* 
-.snowflake-loader {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    background-color: #f0f8ff; 
-  }
-  
-  .snowflake {
-    position: absolute;
-    top: -50px;
-    left: calc(100% * var(--random-x));
-    font-size: 30px;
-    color: skyblue;
-    animation: fall 5s linear infinite;
-  }
-  
- 
-  @keyframes fall {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(100vh);
-    }
-  }
-   */
