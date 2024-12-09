@@ -38,12 +38,9 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 3. Installez les dépendances :
    ```bash
    npm install
-
-ou
+   ou
    ```bash
    yarn install
-   
-   ```
 
 ## **Démarrage du projet**
 
