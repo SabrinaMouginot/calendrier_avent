@@ -40,5 +40,6 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
    npm install
 ou
    ```bash
-  yarn install
+   yarn install
+
 
