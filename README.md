@@ -1,5 +1,6 @@
 # Calendrier de l'Avent 2024 (Frontend)
-https://sablotin.com/
+* https://sablotin.com/ *
+
 ![image](https://github.com/user-attachments/assets/a6b7cfaa-d12d-43f4-ade0-cabbb16a97f4)
 
 Ce projet est le frontend de l'application *Calendrier de l'Avent 2024*, une application interactive pour célébrer les fêtes de Noël avec des films et des animations festives.
