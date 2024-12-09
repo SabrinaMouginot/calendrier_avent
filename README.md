@@ -31,19 +31,19 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
    
    ```
    
----
+
 
 2. Accédez au dossier :
    ```bash
   cd calendrier-avent-frontend
    
----
+
 
 3. Installez les dépendances :
    ```bash
   npm install
    
----
+
 
 ou
    ```bash
