@@ -151,3 +151,10 @@ EMAIL_FROM=adresse-source@example.com
 EMAIL_TO=adresse-pere-noel@example.com
    
    ```
+
+---
+
+### Points importants :
+1. **Mettez à jour les liens** pour refléter votre structure de projet et l'emplacement réel des fichiers sur OVH.
+2. **Ajoutez des détails spécifiques** si vous avez utilisé des sous-domaines ou d'autres configurations particulières sur OVH.
+3. Si des tâches spécifiques sont nécessaires pour le déploiement (comme configurer des redirections ou des permissions), mentionnez-les également.
