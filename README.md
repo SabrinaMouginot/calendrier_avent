@@ -55,11 +55,10 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
    ```bash
    npm run dev
    ```
-ou
+   ou
 
    ```bash
    yarn dev
-   
    ```
 
 2. Ouvrez votre navigateur et accédez à :
@@ -87,14 +86,12 @@ Build le projet pour production :
 
    ```bash
    npm run build
-   
    ```
 
-ou
+   ou
 
    ```bash
    yarn build
-   
    ```
 
 Cela génère un dossier dist/ contenant les fichiers statiques de l'application.
