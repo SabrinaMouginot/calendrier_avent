@@ -65,6 +65,7 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 
    ```arduino
    http://localhost:5173
+   ```
    
 ## **Fonctionnalités**
 
