@@ -47,6 +47,8 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
    ```bash
    yarn install
 
+---
+
 ## **Démarrage du projet**
 
 1. Lancez le projet en mode développement :
@@ -65,7 +67,8 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 
    ```arduino
    http://localhost:5173
-   ```
+
+---
    
 ## **Fonctionnalités**
 
@@ -74,11 +77,14 @@ Intégration de bandes-annonces via l'API TMDb.
 Effets visuels comme la neige animée.
 Musique de Noël avec contrôle du volume.
 
+---
+
 ## **Configuration**
 
 Le fichier principal de configuration se trouve dans vite.config.js.
 Pour utiliser votre propre clé API TMDb, remplacez API_KEY dans les composants utilisant l'API TMDb.
 
+---
 
 ## **Déploiement avec FileZilla et OVH**
 
@@ -105,6 +111,8 @@ Nom d'utilisateur et mot de passe fournis par OVH.
 Accédez au dossier racine du site web (par exemple, /www).
 Uploadez le contenu du dossier dist/ dans le dossier racine.
 
+---
+
 ## **Endpoints**
 
 ### **POST /send-letter**
@@ -128,6 +136,8 @@ Réponse en cas de succès :
 }
    
    ```
+
+---
 
 ## **Configuration**
 
