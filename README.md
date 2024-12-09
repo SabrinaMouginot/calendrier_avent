@@ -108,3 +108,40 @@ Hôte : votre-domaine.com ou ftp.votre-domaine.com
 Nom d'utilisateur et mot de passe fournis par OVH.
 Accédez au dossier racine du site web (par exemple, /www).
 Uploadez le contenu du dossier dist/ dans le dossier racine.
+
+## **Endpoints**
+
+### **POST /send-letter**
+
+Description : Permet d'envoyer une lettre au Père Noël.
+Exemple de requête :
+
+   ```json
+{
+  "name": "Léa",
+  "email": "lea@example.com",
+  "letter": "Cher Père Noël..."
+}
+   
+   ```
+Réponse en cas de succès :
+   
+   ```json
+{
+  "message": "Votre lettre a été envoyée au Père Noël !"
+}
+   
+   ```
+
+## **Configuration**
+
+Créez un fichier .env à la racine avec les variables suivantes :
+
+   
+   ```env
+PORT=5000
+SENDGRID_API_KEY=votre-clé-api-sendgrid
+EMAIL_FROM=adresse-source@example.com
+EMAIL_TO=adresse-pere-noel@example.com
+   
+   ```
