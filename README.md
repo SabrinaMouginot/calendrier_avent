@@ -77,15 +77,30 @@ Musique de Noël avec contrôle du volume.
 Le fichier principal de configuration se trouve dans vite.config.js.
 Pour utiliser votre propre clé API TMDb, remplacez API_KEY dans les composants utilisant l'API TMDb.
 
-## **Déploiement**
 
-Ce projet peut être déployé sur Netlify ou Vercel.
+## **Déploiement avec FileZilla et OVH**
 
-Build le projet :
+### **Étapes de build**
+Build le projet pour production :
 
    ```bash
-npm run build
+   npm run build
    
    ```
 
-Déployez le contenu du dossier dist/.
+ou
+
+   ```bash
+   yarn build
+   
+   ```
+
+Cela génère un dossier dist/ contenant les fichiers statiques de l'application.
+
+### **Utilisation de FileZilla**
+
+Connectez-vous à votre espace FTP OVH avec FileZilla :
+Hôte : votre-domaine.com ou ftp.votre-domaine.com
+Nom d'utilisateur et mot de passe fournis par OVH.
+Accédez au dossier racine du site web (par exemple, /www).
+Uploadez le contenu du dossier dist/ dans le dossier racine.
