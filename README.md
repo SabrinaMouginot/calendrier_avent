@@ -48,3 +48,44 @@ ou
 ## **Démarrage du projet**
 
 1. Lancez le projet en mode développement :
+
+
+   ```bash
+   npm run dev
+
+ou
+
+   ```bash
+   yarn dev
+   
+   ```
+
+2. Ouvrez votre navigateur et accédez à :
+
+   ```arduino
+   http://localhost:5173
+   
+## **Fonctionnalités**
+
+Calendrier interactif avec 24 jours activables.
+Intégration de bandes-annonces via l'API TMDb.
+Effets visuels comme la neige animée.
+Musique de Noël avec contrôle du volume.
+
+## **Configuration**
+
+Le fichier principal de configuration se trouve dans vite.config.js.
+Pour utiliser votre propre clé API TMDb, remplacez API_KEY dans les composants utilisant l'API TMDb.
+
+## **Déploiement**
+
+Ce projet peut être déployé sur Netlify ou Vercel.
+
+Build le projet :
+
+   ```bash
+npm run build
+   
+   ```
+
+Déployez le contenu du dossier dist/.
