@@ -41,5 +41,9 @@ Avant de commencer, assurez-vous d'avoir installé les outils suivants :
 ou
    ```bash
    yarn install
+   
+   ```
 
+## **Démarrage du projet**
 
+1. Lancez le projet en mode développement :
