@@ -1,5 +1,5 @@
-# Calendrier de l'Avent 2024 (Frontend)
-*https://sablotin.com/*
+# [Calendrier de l'Avent 2024](https://sablotin.com/) (Frontend)
+https://sablotin.com/
 
 ![image](https://github.com/user-attachments/assets/a6b7cfaa-d12d-43f4-ade0-cabbb16a97f4)
 
