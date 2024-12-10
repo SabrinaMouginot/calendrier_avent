@@ -10,8 +10,8 @@ Ce projet est le frontend de l'application *Calendrier de l'Avent 2024*, une app
 ## **Technologies utilisées**
 
 - **React.js** : Framework JavaScript pour construire des interfaces utilisateur.
-- **Vite** : Outil de build rapide et moderne pour React. ( *Initialiser le projet : npm create vite@latest calendrier_avent* )
-- **React Router** : Gestion de la navigation entre les pages. ( ***Installer la bibliothèque : npm install react-router-dom*** )
+- **Vite** : Outil de build rapide et moderne pour React. ( **Initialiser le projet : npm create vite@latest calendrier_avent** )
+- **React Router** : Gestion de la navigation entre les pages. ( **Installer la bibliothèque : npm install react-router-dom** )
 - **CSS3** : Animation de la neige et design responsive.
 - **JavaScript ES6+** : Logique d'interaction utilisateur.
 - **TMDb API** : Pour récupérer les informations des films et bandes-annonces.
