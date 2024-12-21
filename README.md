@@ -1,8 +1,159 @@
-# React + Vite
+# [Calendrier de l'Avent 2024 (Frontend)](https://sablotin.com/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/user-attachments/assets/a6b7cfaa-d12d-43f4-ade0-cabbb16a97f4)
 
-Currently, two official plugins are available:
+Ce projet est le frontend de l'application *Calendrier de l'Avent 2024*, une application interactive pour célébrer les fêtes de Noël avec des films et des animations festives. On peut également y envoyer sa lettre au père Noël.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## **Technologies utilisées**
+
+- **React.js** : Framework JavaScript pour construire des interfaces utilisateur.
+- **Vite** : Outil de build rapide et moderne pour React. ( *Initialiser le projet : npm create vite@latest calendrier_avent* )
+- **React Router** : Gestion de la navigation entre les pages. ( *Installer la bibliothèque : npm install react-router-dom* )
+- **CSS3** : Animation de la neige et design responsive.
+- **JavaScript ES6+** : Logique d'interaction utilisateur.
+- **TMDb API** : Pour récupérer les informations des films et bandes-annonces.
+
+---
+
+## **Prérequis**
+
+Avant de commencer, assurez-vous d'avoir installé les outils suivants :
+- [Node.js](https://nodejs.org/) (version 14 ou supérieure)
+- Un gestionnaire de packages comme **npm** ou **yarn**
+
+---
+
+## **Installation**
+
+1. Clonez le dépôt :
+   ```bash
+   git clone https://github.com/votre-utilisateur/calendrier-avent-frontend.git
+   
+   ```
+
+2. Accédez au dossier :
+   ```bash
+   cd calendrier-avent-frontend
+ 
+3. Installez les dépendances :
+   ```bash
+   npm install
+   ```
+   ou
+   
+   ```bash
+   yarn install
+
+---
+
+## **Démarrage du projet**
+
+1. Lancez le projet en mode développement :
+
+
+   ```bash
+   npm run dev
+   ```
+   ou
+
+   ```bash
+   yarn dev
+   ```
+
+2. Ouvrez votre navigateur et accédez à :
+
+   ```arduino
+   http://localhost:5173
+
+---
+   
+## **Fonctionnalités**
+
+Calendrier interactif avec 24 jours activables.
+Intégration de bandes-annonces via l'API TMDb.
+Effets visuels comme la neige animée.
+Musique de Noël avec contrôle du volume.
+
+---
+
+## **Configuration**
+
+Le fichier principal de configuration se trouve dans vite.config.js.
+Pour utiliser votre propre clé API TMDb, remplacez API_KEY dans les composants utilisant l'API TMDb.
+
+---
+
+## **Déploiement avec FileZilla et OVH**
+
+### **Étapes de build**
+Build le projet pour production :
+
+   ```bash
+   npm run build
+   ```
+
+   ou
+
+   ```bash
+   yarn build
+   ```
+
+Cela génère un dossier dist/ contenant les fichiers statiques de l'application.
+
+### **Utilisation de FileZilla**
+
+Connectez-vous à votre espace FTP OVH avec FileZilla :
+Hôte : votre-domaine.com ou ftp.votre-domaine.com
+Nom d'utilisateur et mot de passe fournis par OVH.
+Accédez au dossier racine du site web (par exemple, /www).
+Uploadez le contenu du dossier dist/ dans le dossier racine.
+
+---
+
+## **Endpoints**
+
+### **POST /send-letter**
+
+Description : Permet d'envoyer une lettre au Père Noël.
+Exemple de requête :
+
+   ```json
+{
+  "name": "Léa",
+  "email": "lea@example.com",
+  "letter": "Cher Père Noël..."
+}
+   
+   ```
+Réponse en cas de succès :
+   
+   ```json
+{
+  "message": "Votre lettre a été envoyée au Père Noël !"
+}
+   
+   ```
+
+---
+
+## **Configuration**
+
+Créez un fichier .env à la racine avec les variables suivantes :
+
+   
+   ```env
+PORT=5000
+SENDGRID_API_KEY=votre-clé-api-sendgrid
+EMAIL_FROM=adresse-source@example.com
+EMAIL_TO=adresse-pere-noel@example.com
+   
+   ```
+
+---
+
+### Points importants :
+1. **Mettez à jour les liens** pour refléter votre structure de projet et l'emplacement réel des fichiers sur OVH.
+2. **Ajoutez des détails spécifiques** si vous avez utilisé des sous-domaines ou d'autres configurations particulières sur OVH.
+3. Si des tâches spécifiques sont nécessaires pour le déploiement (comme configurer des redirections ou des permissions), mentionnez-les également.
