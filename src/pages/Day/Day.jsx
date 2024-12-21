@@ -6,7 +6,7 @@ import Loader from "../../components/Loader/Loader";
 import Player from "../../components/Player/Player";
 import "./Day.css";
 
-const API_KEY = "2a80c2b2275b613fff8c798b3ffcfdfa";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 // Liste des films (ID TMDb)
 const movies = [
